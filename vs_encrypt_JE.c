@@ -38,12 +38,12 @@ char *encrypt_password2(char *password, int matrix[3][3])
 int main(int argc, char *argv[])
 {
     // char password[] = "bridgerton";
-    int matrix1[6] = {1, 2, 2, 1, 1, 2};
+    // int matrix1[6] = {1, 2, 2, 1, 1, 2};
     int matrix2[3][3] = {{1, 2, 3}, 
                         {2, 3, 1}, 
                         {3, 1, 2}};
-    // char *encrypted_password = encrypt_password2(argv[1], matrix2);
-    char *encrypted_password = encrypt_password(argv[1], matrix1, 6);
+    char *encrypted_password = encrypt_password2(argv[1], matrix2);
+    // char *encrypted_password = encrypt_password(argv[1], matrix1, 6);
     printf("Encrypted password: %s\n", encrypted_password);
     return 0;
 }
